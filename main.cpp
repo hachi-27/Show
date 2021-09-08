@@ -13,6 +13,7 @@ public:
   }
   bool processEvent(const Event& event, Session* session) override {
           std::string UPSYM;
+          //Used the following if/else to reset the file after completing one round of symbol list.
           if(count <= (NumberOfSymbols )){
         std::cout<<"If condition"<<std::endl;
             if (event.getType() == Event::Type::SUBSCRIPTION_DATA) {
